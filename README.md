@@ -22,6 +22,28 @@ A bunch of notes in addition to the discussion in the patches themselves
 
 - `parser::Walk` can be used as an iterator over the AST nodes. One argument taken by `parser::Walk` is a certain template class which encapsulates functionality on what to do when certain nodes are encountered: see for `Pre` and `Post` examples in `NoBranchingEnforce` in `flang/lib/Semantics/check-directive-structure.h` 
 
+### OpenMP
+
+**What is OpenMP?**: OpenMP is an application programming interface that supports multi-platform shared-memory multiprocessing programming in C, C++, and Fortran, on many platforms, instruction-set architectures and operating systems, including Solaris, AIX, HP-UX, Linux, macOS, and Windows.
+
+- `sections` directive: defines independent sections that can be distributed amongst threads. Example
+
+```f90
+program sample
+    use omp_lib
+
+!$omp sections
+    !$omp section
+        ! do work here to be given to worker thread 1
+
+    !$omp section
+        ! do work here to be given to worker thread 2
+!$omp end sections 
+end program eample
+```
+
+- `simd` directive: defines the things related to SIMD instructions (mainly have non-branching loops within them)
+
 ## Patch discussion (verbatim)
 
 Verbatim copy of the important patch discussions to keep everything in one place
