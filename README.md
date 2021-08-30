@@ -22,6 +22,10 @@ A bunch of notes in addition to the discussion in the patches themselves
 
 - `parser::Walk` can be used as an iterator over the AST nodes. One argument taken by `parser::Walk` is a certain template class which encapsulates functionality on what to do when certain nodes are encountered: see for `Pre` and `Post` examples in `NoBranchingEnforce` in `flang/lib/Semantics/check-directive-structure.h` 
 
+- Things like `OpenMPLoopConstruct` which have a bunch of things like a begin directive, optional `DoConstruct` and an optional end directive are implemented as `std::tuple`. All parser nodes can be found in `/flang/include/Semantics/parse-tree.h`
+
+- Most of the classes in `/flang/include/Semantics/parse-tree.h` are created as boilerplate macros which makes a lot of sense: common code defined as macro expansion. Most classes simply wrap a structure: `std::tuple` or `std::variant` or popularly the `CharBlock` (dealt with in `/flang/include/Semantics/CharBlock.h`: which basically defines a single alphanumeric character mapped to a parser node to trace back source and other contextual information)
+
 ### OpenMP
 
 **What is OpenMP?**: OpenMP is an application programming interface that supports multi-platform shared-memory multiprocessing programming in C, C++, and Fortran, on many platforms, instruction-set architectures and operating systems, including Solaris, AIX, HP-UX, Linux, macOS, and Windows.
