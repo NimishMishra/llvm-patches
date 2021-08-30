@@ -35,7 +35,7 @@ According to OpenMP 5.0 spec document, the following semantic restrictions have 
 Semantic checks for the following are not necessary, since use of orphaned section construct (i.e. without an enclosing sections directive) throws parser errors and control flow never reaches the semantic checking phase.
 Added a test case for the same in `llvm-project/flang/test/Parser/omp-sections01.f90`
 
-- [simd] **Must be a structured block / A program that branches in or out of a function with declare simd is non conforming. 
+- [simd] **Must be a structured block / A program that branches in or out of a function with declare simd is non conforming.**
 
 Uses the already existing branching out of OpenMP structured block logic as well as changes introduced in point 3 below to semantically validate the restriction. Test case added to `llvm-project/flang/test/Semantics/omp-simd01.f90`
 
