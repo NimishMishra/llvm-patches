@@ -8,7 +8,7 @@ A bunch of things related to my work on LLVM compiler infrastructure
 
 ## Additional notes
 
-A bunch of nodes in addition to the discussion in the patches themselves
+A bunch of notes in addition to the discussion in the patches themselves
 
 ### Generic notes on what works where in the LLVM codebase
 
