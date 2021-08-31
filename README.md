@@ -22,9 +22,11 @@ A bunch of notes in addition to the discussion in the patches themselves
 
 - `parser::Walk` can be used as an iterator over the AST nodes. One argument taken by `parser::Walk` is a certain template class which encapsulates functionality on what to do when certain nodes are encountered: see for `Pre` and `Post` examples in `NoBranchingEnforce` in `flang/lib/Semantics/check-directive-structure.h` 
 
-- Things like `OpenMPLoopConstruct` which have a bunch of things like a begin directive, optional `DoConstruct` and an optional end directive are implemented as `std::tuple`. All parser nodes can be found in `/flang/include/Semantics/parse-tree.h`
+- Things like `OpenMPLoopConstruct` which have a bunch of things like a begin directive, optional `DoConstruct` and an optional end directive are implemented as `std::tuple`. All parser nodes can be found in `llvm-project/flang/include/flang/Parser/parse-tree.h`
 
-- Most of the classes in `/flang/include/Semantics/parse-tree.h` are created as boilerplate macros which makes a lot of sense: common code defined as macro expansion. Most classes simply wrap a structure: `std::tuple` or `std::variant` or popularly the `CharBlock` (dealt with in `/flang/include/Semantics/CharBlock.h`: which basically defines a single alphanumeric character mapped to a parser node to trace back source and other contextual information)
+- Most of the classes in `/flang/include/flang/Parser/parse-tree.h` are created as boilerplate macros which makes a lot of sense: common code defined as macro expansion. Most classes simply wrap a structure: `std::tuple` or `std::variant` or popularly the `CharBlock` (dealt with in `/flang/include/Parser/char-block.h`: which basically defines a single alphanumeric character mapped to a parser node to trace back source and other contextual information)
+
+- Best way to check OpenMP semantics is to head over to the file `llvm-project/flang/lib/Semantics/check-omp-structure.cpp`. Let's say you need to semantically validate `OpenMPAtomicConstruct`. Create a suitable class (outside of `OmpStructureChecker`) and within `OmpStructureChecker::Enter(const auto OpenMPAtomicConstruct&)`, initiate a `parser::walk(..., <class here>)` with `<class here>` replaced with the object of the class you created. Then this `<class here>` can have all sorts of `Pre` and `Post` you need for the semantic checks.
 
 ### OpenMP
 
@@ -47,6 +49,8 @@ end program eample
 ```
 
 - `simd` directive: defines the things related to SIMD instructions (mainly have non-branching loops within them)
+
+- `atomic` directive: defines a set of statements which must be done **atomically**. Can include a bunch of reads, writes, updates etc. Defined as `OpenMPAtomicConstruct` node in `llvm-project/flang/include/flang/Parser/parse-tree.h`. 
 
 ## Patch discussion (verbatim)
 
