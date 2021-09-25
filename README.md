@@ -45,7 +45,7 @@ program sample
     !$omp section
         ! do work here to be given to worker thread 2
 !$omp end sections 
-end program eample
+end program sample
 ```
 
 - `simd` directive: defines the things related to SIMD instructions (mainly have non-branching loops within them)
