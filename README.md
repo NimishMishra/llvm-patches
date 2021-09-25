@@ -65,10 +65,6 @@ According to OpenMP 5.0 spec document, the following semantic restrictions have 
 Semantic checks for the following are not necessary, since use of orphaned section construct (i.e. without an enclosing sections directive) throws parser errors and control flow never reaches the semantic checking phase.
 Added a test case for the same in `llvm-project/flang/test/Parser/omp-sections01.f90`
 
-- [simd] **Must be a structured block / A program that branches in or out of a function with declare simd is non conforming.**
-
-Uses the already existing branching out of OpenMP structured block logic as well as changes introduced in point 3 below to semantically validate the restriction. Test case added to `llvm-project/flang/test/Semantics/omp-simd01.f90`
-
 - [sections] **Must be a structured block**
 
 Added test case as `llvm-project/flang/test/Semantics/omp-sections02.f90` and made changes to branching logic in `llvm-project/flang/lib/Semantics/check-directive-structure.h` as follows:
@@ -81,3 +77,17 @@ Added test case as `llvm-project/flang/test/Semantics/omp-sections02.f90` and ma
  [changes] Although `NoBranchingEnforce` was handling labelled `EXIT`s and `CYCLE`s well, there were no semantic checks for unlabelled `CYCLE`s and `EXIT`s. Support added for them as well. For unlabeled cycles and exits, there's a need to efficiently differentiate the `ConstructNode` added to the stack before the concerned OpenMP directive was encountered and the nodes added after the directive was encountered. The same is done through a simple private unsigned counter within `NoBranchingEnforce` itself
 
  [addition] Addition of `EmitUnlabelledBranchOutError` is due to lack of an error message that gave proper context to the programmer. Existing error messages are either named error messages (which aren't valid for unlabeled cycles and exits) or a simple CYCLE/EXIT statement not allowed within SECTIONS construct which is more generic than the reality.
+
+
+ Other than these implementations, a test case for simd construct has been added.
+
+ - [Test case for simd] **Must be a structured block / A program that branches in or out of a function with declare simd is non conforming.**
+
+Uses the already existing branching out of OpenMP structured block logic as well as changes introduced above to semantically validate the restriction. Test case added to `llvm-project/flang/test/Semantics/omp-simd01.f90`
+
+----------------------
+
+**High priority TODOs**:
+
+1. (done) Decide whether CALL is an invalid branch out of an OpenMP structured block
+2. (done) Fix !$omp do's handling of unlabeled CYCLEs
