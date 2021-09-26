@@ -4,6 +4,8 @@ A bunch of things related to my work on LLVM compiler infrastructure
 
 ## Patches
 
+[Semantic checks for OpenMP critical construct name resolution](https://reviews.llvm.org/D110502)
+
 [Semantic checks for OpenMP constructs: sections and simd](https://reviews.llvm.org/D108904)
 
 ## Additional notes
@@ -15,6 +17,16 @@ A bunch of notes in addition to the discussion in the patches themselves
 - [D108904](https://reviews.llvm.org/D108904) : contains a `std::visit(common::visitors(...))` which can be used as a boilerplate to iterate over `std::variant` anywhere in the codebase.
 
 - [D108904](https://reviews.llvm.org/D108904) : contains boilerplate `Pre` and `Post` functions to manage `SemanticsContext` anywhere in the `Semantics` of the codebase
+
+### Parser
+
+- Possibly the most important source code resides in `llvm-project/flang/include/flang/Parser/parse-tree.h` which contains all the parse tree nodes' definition.
+
+- The generic structure is the same for all. Suppose OpenMP critical construct needs to be defined. Therefore first the individual components will be defined: `struct OmpCriticalDirective`, `struct Block`, and `struct OmpEndCriticalDirective` and then `struct OpenMPCriticalConstruct` shall be defined as a wrapper for a tuple `std::tuple<OmpCriticalDirective, Block, OmpEndCriticalDirective>`.
+
+- Most classes share code. Therefore you will find a lot of macros as class boilerplates. Boilerplates usually wrap very simple functionality and functions.
+
+- Most of the parsing activities are done by `TYPE_PARSE` that is defined in `llvm-project/flang/lib/Parser/type-parser-implementation.h`, which is a wrapper around `parser.Parse(state)` where `state` is `ParserState`. The actual `struct Parser` template is defined in `llvm-project/flang/lib/Parser/type-parsers.h` which is the base for all other parser instantiations.
 
 ### Semantics
 
@@ -55,6 +67,28 @@ end program sample
 ## Patch discussion (verbatim)
 
 Verbatim copy of the important patch discussions to keep everything in one place
+
+### D110502
+
+Taken forward from https://reviews.llvm.org/D93051 (authored by @sameeranjoshi )
+
+As reported in https://bugs.llvm.org/show_bug.cgi?id=48145, name resolution for omp critical construct was failing. This patch adds functionality to help that name resolution as well as implementation to catch name mismatches.
+
+    - **Changes to check-omp-structure.cpp**
+
+ In `llvm-project/flang/lib/Semantics/check-omp-structure.cpp`, under `void OmpStructureChecker::Enter(const parser::OpenMPCriticalConstruct &x)`, logic is added to handle the different forms of name mismatches and report appropriate error. The following semantic restrictions are therefore handled here:
+
+        - If a name is specified on a critical directive, the same name must also be specified on the end critical directive
+
+        - If no name appears on the critical directive, no name can appear on the end critical directive
+
+        - If a name appears on either the start critical directive or the end critical directive
+
+The only allowed combinations are: (1) both start and end directives have same name, (2) both start and end directives have NO name altogether
+
+    - **Changes to resolve-directives.cpp**
+
+ In `llvm-project/flang/lib/Semantics/resolve-directives.cpp`, two `Pre` functions are added for `OmpCriticalDirective` and `OmpEndCriticalDirective` that invoke the services of `ResolveOmpName` to give new symbols to the names. This aids in removing the undesirable behavior noted in https://bugs.llvm.org/show_bug.cgi?id=48145
 
 ### D108904
 
