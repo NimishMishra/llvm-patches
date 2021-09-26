@@ -74,19 +74,19 @@ Taken forward from https://reviews.llvm.org/D93051 (authored by @sameeranjoshi )
 
 As reported in https://bugs.llvm.org/show_bug.cgi?id=48145, name resolution for omp critical construct was failing. This patch adds functionality to help that name resolution as well as implementation to catch name mismatches.
 
-    - **Changes to check-omp-structure.cpp**
+- **Changes to check-omp-structure.cpp**
 
  In `llvm-project/flang/lib/Semantics/check-omp-structure.cpp`, under `void OmpStructureChecker::Enter(const parser::OpenMPCriticalConstruct &x)`, logic is added to handle the different forms of name mismatches and report appropriate error. The following semantic restrictions are therefore handled here:
 
-        - If a name is specified on a critical directive, the same name must also be specified on the end critical directive
+    - If a name is specified on a critical directive, the same name must also be specified on the end critical directive
 
-        - If no name appears on the critical directive, no name can appear on the end critical directive
+    - If no name appears on the critical directive, no name can appear on the end critical directive
 
-        - If a name appears on either the start critical directive or the end critical directive
+    - If a name appears on either the start critical directive or the end critical directive
 
 The only allowed combinations are: (1) both start and end directives have same name, (2) both start and end directives have NO name altogether
 
-    - **Changes to resolve-directives.cpp**
+- **Changes to resolve-directives.cpp**
 
  In `llvm-project/flang/lib/Semantics/resolve-directives.cpp`, two `Pre` functions are added for `OmpCriticalDirective` and `OmpEndCriticalDirective` that invoke the services of `ResolveOmpName` to give new symbols to the names. This aids in removing the undesirable behavior noted in https://bugs.llvm.org/show_bug.cgi?id=48145
 
