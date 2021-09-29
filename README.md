@@ -4,6 +4,8 @@ A bunch of things related to my work on LLVM compiler infrastructure
 
 ## Patches
 
+[Semantic checks for OpenMP atomic construct](https://reviews.llvm.org/D110714)
+
 [Semantic checks for OpenMP critical construct name resolution](https://reviews.llvm.org/D110502)
 
 [Semantic checks for OpenMP constructs: sections and simd](https://reviews.llvm.org/D108904)
@@ -17,6 +19,8 @@ A bunch of notes in addition to the discussion in the patches themselves
 - [D108904](https://reviews.llvm.org/D108904) : contains a `std::visit(common::visitors(...))` which can be used as a boilerplate to iterate over `std::variant` anywhere in the codebase.
 
 - [D108904](https://reviews.llvm.org/D108904) : contains boilerplate `Pre` and `Post` functions to manage `SemanticsContext` anywhere in the `Semantics` of the codebase
+
+- [D110714](https://reviews.llvm.org/D110714): contains a reusable `HasMember` way of recognising whether the `typename` in a templated function belongs to a certain variant. This could be treated as a complementary way to `std::visit`.
 
 ### Parser
 
@@ -64,9 +68,50 @@ end program sample
 
 - `atomic` directive: defines a set of statements which must be done **atomically**. Can include a bunch of reads, writes, updates etc. Defined as `OpenMPAtomicConstruct` node in `llvm-project/flang/include/flang/Parser/parse-tree.h`. 
 
+- `critical`: defines a section of code as critical, implies only one thread in a thread worker group shall enter into the section at a time
+
 ## Patch discussion (verbatim)
 
 Verbatim copy of the important patch discussions to keep everything in one place
+
+### D110714
+
+The following patch implements the following semantic checks for atomic construct based on OpenMP 5.0 specifications.
+
+- **In atomic update statement, binary operator is one of +, *, -, /, .AND., .OR., .EQV., or .NEQV.**
+
+In `llvm-project/flang/lib/Semantics/check-omp-structure.cpp`, a new class `OmpAtomicConstructChecker` is added for all semantic checks implemented in this patch. This class is used in a `parser::Walk` in `OmpStructureChecker::CheckOmpAtomicConstructStructure` in `check-omp-structure.cpp` itself.
+
+The entire aim is to, for any OpenMP atomic update statement, initiate a `parser::Walk` on the construct, capture the assignment statement in `bool Pre(const parser::AssignmentStmt &assignment)` inside `OmpAtomicConstructChecker`, and initiate a check with `CheckOperatorValidity` for the operator validity.
+
+`CheckOperatorValidity` has two `HasMember` checks. The first check is to see whether the assignment statement has a binary operator or not. Because if it doesn't, the call to `CompareNames` is unsuccessful. The second check is to see if the operator is an allowed binary operator.
+
+- **In atomic update statement, the statements must be of the form x = x operator expr or x = expr operator x**
+
+The `CompareNames` function called from within `CheckOperatorValidity` checks that if we have an assignment statement with a binary operator, whether the variable names are same on the LHS and RHS.
+
+- **In atomic update statement, only the following intrinsic procedures are allowed: MAX, MIN, IAND, IOR, or IEOR**
+
+The functionality for the same is added in the function `CheckProcedureDesignatorValidity`.
+
+--------------
+Alternative approaches tried which we could discuss upon:
+
+- In `CheckOperatorValidity`, I earlier tried a `std::visit` approach. But that required us to enumerate all **dis**-allowed binary operators. Because had we emitted errors for anything that is not allowed, we began facing issues with assignment statements in atomic READ statements.
+
+- In `llvm-project/flang/include/flang/Parser/parse-tree.h`, the `struct Expr` has a variant where all relevant operators and procedure indirection things are present. One interesting structure is `IntrinsicBinary` which is the base structure for all relevant binary operators in `parser::Expr`. However, we found no way to capture the different binary operators through this base structure. Concretely, I was thinking something like this:
+
+```c
+std::visit(common::visitors{
+
+[&](const parser::Expr::IntrinsicBinary &x){
+        // check for validity of variable names as well as operator validity   
+    },
+[&](const auto &x){
+        // got something other than a valid binary operator. Let it pass. 
+    },
+}, node);
+```
 
 ### D110502
 
