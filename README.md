@@ -8,7 +8,7 @@ A bunch of things related to my work on LLVM compiler infrastructure
 
 [Semantic checks for OpenMP critical construct name resolution](https://reviews.llvm.org/D110502)
 
-[Semantic checks for OpenMP constructs: sections and simd](https://reviews.llvm.org/D108904)
+[[Merged](https://github.com/llvm/llvm-project/commit/063c5bc31b89d85aba9ea7c2aa0d2440ec468ed2)][Semantic checks for OpenMP constructs: sections and simd](https://reviews.llvm.org/D108904) 
 
 ## Additional notes
 
