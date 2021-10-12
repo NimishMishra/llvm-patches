@@ -4,11 +4,11 @@ A bunch of things related to my work on LLVM compiler infrastructure
 
 ## Patches
 
-[Test case for semantic checks for OpenMP parallel sections contruct](https://reviews.llvm.org/D111438)
+[[Merged](https://github.com/llvm/llvm-project/commit/d4717b9b9def89c503a20eaf7700f87c4b52d530)][Test case for semantic checks for OpenMP parallel sections contruct](https://reviews.llvm.org/D111438)
 
 [Semantic checks for OpenMP atomic construct](https://reviews.llvm.org/D110714)
 
-[Semantic checks for OpenMP critical construct name resolution](https://reviews.llvm.org/D110502)
+[[Merged](https://github.com/llvm/llvm-project/commit/fe2d053c4505b7ccc8a86e266e68d2f97aaca1e1)][Semantic checks for OpenMP critical construct name resolution](https://reviews.llvm.org/D110502)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/063c5bc31b89d85aba9ea7c2aa0d2440ec468ed2)][Semantic checks for OpenMP constructs: sections and simd](https://reviews.llvm.org/D108904) 
 
