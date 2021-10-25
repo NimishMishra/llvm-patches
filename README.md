@@ -72,6 +72,36 @@ end program sample
 
 - `critical`: defines a section of code as critical, implies only one thread in a thread worker group shall enter into the section at a time
 
+### PFT to OpenMP lowering
+
+MORE INFORMATION WILL BE ADDED AS TIME PASSES
+
+- You need to have a bunch of definable operations which you can create lowering code for. In namespace `mlir` in `mlir/lib/Conversion/PassDetails.h`, there is a child namespace called `namespace omp` that encapsulates `class OpenMPDialect` which in turn is actually in an inc file you will find in your `build` and `install` folder. `build`: `tools/mlir/include/mlir/Dialect/OpenMP/OpenMPOpsDialect.h.inc`; similarly for `install` folder too. To include a new operation, do it in `mlir/include/mlir/Dialect/OpenMP/OpenMPOps.td`.
+
+- For `Variadic<AnyType>:$private_vars` and `Variadic<AnyType>:$firstprivate_vars`, you need to extract the clause list, extract these clases, and convert their arguments to an object list through `genObjectList` that fits in everything in `SmallVector<Value,4>`
+
+- Most of the OMP clauses are defined in `llvm/include/llvm/Frontend/OpenMP/OpenMP.td`. For example
+
+```td
+def OMPC_Reduction : Clause<"reduction">{
+    let clangClass = "OMPReductionClause";
+    let flangClass = "OmpReductionClause";
+}
+
+def OMP_Sections : Directive<"sections">{
+    let allowedClauses = [
+        VersionedClause<OMPC_Private>,
+        VersionedClause<OMPC_LastPrivate>,
+        VersionedClause<OMPC_FirstPrivate>,
+        VersionedClause<OMPC_Reduction>,
+        VersionedClause<OMPC_NoWait>,
+        VersionedClause<OMPC_Allocate>
+    ];
+}
+```
+
+basically define OMP classes for both clang and flang, and a bunch of pragmas or directives to be used in both places as well as the allowed clauses in the clause list.
+
 ## Patch discussion (verbatim)
 
 Verbatim copy of the important patch discussions to keep everything in one place
