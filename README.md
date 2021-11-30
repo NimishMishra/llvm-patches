@@ -76,7 +76,9 @@ end program sample
 
 MORE INFORMATION WILL BE ADDED AS TIME PASSES
 
-- You need to have a bunch of definable operations which you can create lowering code for. In namespace `mlir` in `mlir/lib/Conversion/PassDetails.h`, there is a child namespace called `namespace omp` that encapsulates `class OpenMPDialect` which in turn is actually in an inc file you will find in your `build` and `install` folder. `build`: `tools/mlir/include/mlir/Dialect/OpenMP/OpenMPOpsDialect.h.inc`; similarly for `install` folder too. To include a new operation, do it in `mlir/include/mlir/Dialect/OpenMP/OpenMPOps.td`.
+- You need to have a bunch of definable operations which you can create lowering code for. In namespace `mlir` in `mlir/lib/Conversion/PassDetails.h`, there is a child namespace called `namespace omp` that encapsulates `class OpenMPDialect` which in turn is actually in an inc file you will find in your `build` and `install` folder. `build`: `tools/mlir/include/mlir/Dialect/OpenMP/OpenMPOpsDialect.h.inc`; similarly for `install` folder too. 
+
+- To include a new operation, do it in `mlir/include/mlir/Dialect/OpenMP/OpenMPOps.td`. The corresponding created class will be in `install/include/mlir/Dialect/OpenMP/OpenMPOps.h.inc` and all function definitions will be in `install/include/mlir/Dialect/OpenMP/OpenMPOps.cpp.inc`. You can define your custom builders etc in the `mlir/include/mlir/Dialect/OpenMP/OpenMPOps.td` file, whose definition goes in `mlir/lib/Dialect/OpenMP/IR/OpenMPDialect.cpp`.
 
 - For `Variadic<AnyType>:$private_vars` and `Variadic<AnyType>:$firstprivate_vars`, you need to extract the clause list, extract these clases, and convert their arguments to an object list through `genObjectList` that fits in everything in `SmallVector<Value,4>`
 
