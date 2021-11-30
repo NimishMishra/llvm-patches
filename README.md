@@ -76,13 +76,13 @@ end program sample
 
 MORE INFORMATION WILL BE ADDED AS TIME PASSES
 
-- You need to have a bunch of definable operations which you can create lowering code for. In namespace `mlir` in `mlir/lib/Conversion/PassDetails.h`, there is a child namespace called `namespace omp` that encapsulates `class OpenMPDialect` which in turn is actually in an inc file you will find in your `build` and `install` folder. `build`: `tools/mlir/include/mlir/Dialect/OpenMP/OpenMPOpsDialect.h.inc`; similarly for `install` folder too. 
+- You need to have a bunch of definable operations which you can create lowering code for. In namespace `mlir` in `llvm-project/mlir/lib/Conversion/PassDetails.h`, there is a child namespace called `namespace omp` that encapsulates `class OpenMPDialect` which in turn is actually in an inc file you will find in your `build` and `install` folder. `build`: `tools/mlir/include/mlir/Dialect/OpenMP/OpenMPOpsDialect.h.inc`; similarly for `install` folder too. 
 
-- To include a new operation, do it in `mlir/include/mlir/Dialect/OpenMP/OpenMPOps.td`. The corresponding created class will be in `install/include/mlir/Dialect/OpenMP/OpenMPOps.h.inc` and all function definitions will be in `install/include/mlir/Dialect/OpenMP/OpenMPOps.cpp.inc`. You can define your custom builders etc in the `mlir/include/mlir/Dialect/OpenMP/OpenMPOps.td` file, whose definition goes in `mlir/lib/Dialect/OpenMP/IR/OpenMPDialect.cpp`.
+- To include a new operation, do it in `llvm-project/mlir/include/mlir/Dialect/OpenMP/OpenMPOps.td`. The corresponding created class will be in `install/include/mlir/Dialect/OpenMP/OpenMPOps.h.inc` and all function definitions will be in `install/include/mlir/Dialect/OpenMP/OpenMPOps.cpp.inc`. You can define your custom builders etc in the `llvm-project/mlir/include/mlir/Dialect/OpenMP/OpenMPOps.td` file, whose definition goes in `llvm-project/mlir/lib/Dialect/OpenMP/IR/OpenMPDialect.cpp`.
 
 - For `Variadic<AnyType>:$private_vars` and `Variadic<AnyType>:$firstprivate_vars`, you need to extract the clause list, extract these clases, and convert their arguments to an object list through `genObjectList` that fits in everything in `SmallVector<Value,4>`
 
-- Most of the OMP clauses are defined in `llvm/include/llvm/Frontend/OpenMP/OMP.td`. For example
+- Most of the OMP clauses are defined in `llvm-project/llvm/include/llvm/Frontend/OpenMP/OMP.td`. For example
 
 ```td
 def OMPC_Reduction : Clause<"reduction">{
@@ -103,6 +103,9 @@ def OMP_Sections : Directive<"sections">{
 ```
 
 basically define OMP classes for both clang and flang, and a bunch of pragmas or directives to be used in both places as well as the allowed clauses in the clause list.
+
+- To know how exactly the clauses must be handled, refer to `llvm-project/llvm/include/llvm/Frontend/OpenMP/OMP.td`, pick one clause like `OMPC_Reduction`, and check its `clangClass` and `flangClass` entry. This `flangClass`'s details will be found in `llvm-project/flang/include/flang/Parser/parse-tree.h`.
+
 
 ## Patch discussion (verbatim)
 
