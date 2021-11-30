@@ -82,7 +82,7 @@ MORE INFORMATION WILL BE ADDED AS TIME PASSES
 
 - For `Variadic<AnyType>:$private_vars` and `Variadic<AnyType>:$firstprivate_vars`, you need to extract the clause list, extract these clases, and convert their arguments to an object list through `genObjectList` that fits in everything in `SmallVector<Value,4>`
 
-- Most of the OMP clauses are defined in `llvm/include/llvm/Frontend/OpenMP/OpenMP.td`. For example
+- Most of the OMP clauses are defined in `llvm/include/llvm/Frontend/OpenMP/OMP.td`. For example
 
 ```td
 def OMPC_Reduction : Clause<"reduction">{
