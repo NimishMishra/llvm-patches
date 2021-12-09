@@ -74,6 +74,14 @@ end program sample
 
 OpenMP is a bunch of pragmas you can put in your code to tell the compiler how to handle them exactly. For example, `!$omp atomic read` above a `x = y` means the compiler should perform this atomically. OpenMP is a **dialect**. And it is upto compiler engineers to build support in both flang and mlir for OpenMP dialect.
 
+## MLIR
+
+- An infrastructure where you can define a bunch of things aiding your compiler infrastructure needs. You can define your own operations, type systems etc and reuse MLIR's pass management, threading etc to get a compiler infrastructure up and running really quick. For example, we import MLIR functionality into flang, lower PFT to MLIR, and let MLIR do its magic, and finally lower to LLVM. This integration is seemless.
+
+- MLIR can be used to design custom IR for a variety of use-cases. For example, the same MLIR infra can be used to generate code for Fortran as well as Tensorflow.
+
+- Clang builds some AST and performs transformations on the same. This is fairly successful. But people have started looking at how retaining some of the high level semantics can help in better transformations. LLVM IR loses this context; thus MLIR hopes to retain such high level semantic information and perform transformations on the same.
+
 ### PFT to MLIR lowering
 
 MORE INFORMATION WILL BE ADDED AS TIME PASSES
