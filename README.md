@@ -72,7 +72,9 @@ end program sample
 
 - `critical`: defines a section of code as critical, implies only one thread in a thread worker group shall enter into the section at a time
 
-### PFT to OpenMP lowering
+OpenMP is a bunch of pragmas you can put in your code to tell the compiler how to handle them exactly. For example, `!$omp atomic read` above a `x = y` means the compiler should perform this atomically. OpenMP is a **dialect**. And it is upto compiler engineers to build support in both flang and mlir for OpenMP dialect.
+
+### PFT to MLIR lowering
 
 MORE INFORMATION WILL BE ADDED AS TIME PASSES
 
