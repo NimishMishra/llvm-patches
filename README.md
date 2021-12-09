@@ -18,7 +18,7 @@ A bunch of notes in addition to the discussion in the patches themselves
 
 ### Generic notes on what works where in the LLVM codebase
 
-- [D108904](https://reviews.llvm.org/D108904) : contains a `std::visit(common::visitors(...))` which can be used as a boilerplate to iterate over `std::variant` anywhere in the codebase.
+- [D108904](https://reviews.llvm.org/D108904) : contains a `std::visit(common::visitors{...})` which can be used as a boilerplate to iterate over `std::variant` anywhere in the codebase.
 
 - [D108904](https://reviews.llvm.org/D108904) : contains boilerplate `Pre` and `Post` functions to manage `SemanticsContext` anywhere in the `Semantics` of the codebase
 
