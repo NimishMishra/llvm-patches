@@ -74,7 +74,7 @@ end program sample
 
 OpenMP is a bunch of pragmas you can put in your code to tell the compiler how to handle them exactly. For example, `!$omp atomic read` above a `x = y` means the compiler should perform this atomically. OpenMP is a **dialect**. And it is upto compiler engineers to build support in both flang and mlir for OpenMP dialect.
 
-## MLIR
+### MLIR
 
 - An infrastructure where you can define a bunch of things aiding your compiler infrastructure needs. You can define your own operations, type systems etc and reuse MLIR's pass management, threading etc to get a compiler infrastructure up and running really quick. For example, we import MLIR functionality into flang, lower PFT to MLIR, and let MLIR do its magic, and finally lower to LLVM. This integration is seemless.
 
@@ -90,7 +90,7 @@ MORE INFORMATION WILL BE ADDED AS TIME PASSES
 
 - To include a new operation, do it in `llvm-project/mlir/include/mlir/Dialect/OpenMP/OpenMPOps.td`. The corresponding created class will be in `install/include/mlir/Dialect/OpenMP/OpenMPOps.h.inc` and all function definitions will be in `install/include/mlir/Dialect/OpenMP/OpenMPOps.cpp.inc`. You can define your custom builders etc in the `llvm-project/mlir/include/mlir/Dialect/OpenMP/OpenMPOps.td` file, whose definition goes in `llvm-project/mlir/lib/Dialect/OpenMP/IR/OpenMPDialect.cpp`.
 
-- For `Variadic<AnyType>:$private_vars` and `Variadic<AnyType>:$firstprivate_vars`, you need to extract the clause list, extract these clases, and convert their arguments to an object list through `genObjectList` that fits in everything in `SmallVector<Value,4>`
+- For `Variadic<AnyType>:$private_vars` and `Variadic<AnyType>:$firstprivate_vars`, you need to extract the clause list, extract these clauses, and convert their arguments to an object list through `genObjectList` that fits in everything in `SmallVector<Value>`. `genObjectList` basically extracts the symbol of every argument and gets an address reference for the same. This is later used to create FIR.
 
 - Most of the OMP clauses are defined in `llvm-project/llvm/include/llvm/Frontend/OpenMP/OMP.td`. For example
 
