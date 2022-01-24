@@ -6,7 +6,7 @@ A bunch of things related to my work on LLVM compiler infrastructure
 
 [[Merged](https://github.com/llvm/llvm-project/commit/d4717b9b9def89c503a20eaf7700f87c4b52d530)][Test case for semantic checks for OpenMP parallel sections contruct](https://reviews.llvm.org/D111438)
 
-[Semantic checks for OpenMP atomic construct](https://reviews.llvm.org/D110714)
+[[Merged](https://github.com/llvm/llvm-project/commit/3519dcfec22963fbb84e154cecc2df22e6c7724f)][Semantic checks for OpenMP atomic construct](https://reviews.llvm.org/D110714)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/fe2d053c4505b7ccc8a86e266e68d2f97aaca1e1)][Semantic checks for OpenMP critical construct name resolution](https://reviews.llvm.org/D110502)
 
