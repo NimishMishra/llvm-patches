@@ -118,6 +118,22 @@ basically define OMP classes for both clang and flang, and a bunch of pragmas or
 
 - MLIR is a general purpose intermediate representation. It does not understand external types. In order to do so, you need to do a `public mlir::omp::PointerLikeType::ExternalModel` wherein you attach an external type to the pointer model. This is just a wrapper around a `getElementType` method that *casts* the `mlir::Type pointer` to the type that MLIR wants to capture from the external source.
 
+- In `llvm/include/llvm/Frontend/OpenMP/OMP.td`, OMPC (OMP clauses) are defined as given here. In order to lower these, MLIR usually expects a `String::Attr`, wherein you need to convert the enum clause value to `mlir::StringAttr`. In order to do so, MLIR provides an interface `stringifyClause + <NAME>` (like `stringifyClauseMemoryOrderKind`) which takes in an argument of the form `omp::ClauseMemoryOrderKind::acquire`. This will end up stringifying the entire thing.
+
+```td
+def OMPC_MemoryOrder : Clause<"memory_order"> {
+    let enumClauseValue = "MemoryOrderKind";
+    let allowedClauseValues = [
+        OMP_MEMORY_ORDER_SeqCst,
+        OMP_MEMORY_ORDER_AcqRel,
+        OMP_MEMORY_ORDER_Acquire,
+        OMP_MEMORY_ORDER_Release,
+        OMP_MEMORY_ORDER_Relaxed,
+        OMP_MEMORY_ORDER_Default
+    ];
+}    
+```
+
 ## Patch discussion (verbatim)
 
 Verbatim copy of the important patch discussions to keep everything in one place
