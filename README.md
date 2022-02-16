@@ -81,6 +81,8 @@ OpenMP is a bunch of pragmas you can put in your code to tell the compiler how t
     -- **speculative**: use speculative techniques like transactional memory. Just like DBMS involves transactions as a group (they are committed and rolled back as a group), similar ideas are ported to concurrent executions of critical sections
     -- **non-speculative**: do not use speculative techniques as transactional memory
 
+- Getting expressions is one of the core things you have to perform a lot. The `GetExpr` interface is defined in `flang/include/flang/Semantics/tools.h`. In MLIR, use AbstractConverter's `genExprValue`; you may have to work with `fir::ExtendableValue` (which is further defined in `flang/Optimizer/Builder/BoxValue.h`). From here, you can extract `mlir::Value` through a `fir::getBase` (this gets the final value [the temporary variable number] from the computation of the entire expression.
+
 ### MLIR
 
 - An infrastructure where you can define a bunch of things aiding your compiler infrastructure needs. You can define your own operations, type systems etc and reuse MLIR's pass management, threading etc to get a compiler infrastructure up and running really quick. For example, we import MLIR functionality into flang, lower PFT to MLIR, and let MLIR do its magic, and finally lower to LLVM. This integration is seemless.
