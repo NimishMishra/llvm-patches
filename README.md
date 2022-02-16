@@ -91,6 +91,8 @@ OpenMP is a bunch of pragmas you can put in your code to tell the compiler how t
 
 - Clang builds some AST and performs transformations on the same. This is fairly successful. But people have started looking at how retaining some of the high level semantics can help in better transformations. LLVM IR loses this context; thus MLIR hopes to retain such high level semantic information and perform transformations on the same.
 
+- **Dominance checking**: A part of code resides in `mlir/lib/IR/Verifier.cpp` which manipulates the regions of different things, understands what region envelops what region, and so on.
+
 ### PFT to MLIR lowering
 
 MORE INFORMATION WILL BE ADDED AS TIME PASSES
