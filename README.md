@@ -116,6 +116,7 @@ basically define OMP classes for both clang and flang, and a bunch of pragmas or
 
 - To know how exactly the clauses must be handled, refer to `llvm-project/llvm/include/llvm/Frontend/OpenMP/OMP.td`, pick one clause like `OMPC_Reduction`, and check its `clangClass` and `flangClass` entry. This `flangClass`'s details will be found in `llvm-project/flang/include/flang/Parser/parse-tree.h`.
 
+- MLIR is a general purpose intermediate representation. It does not understand external types. In order to do so, you need to do a `public mlir::omp::PointerLikeType::ExternalModel` wherein you attach an external type to the pointer model. This is just a wrapper around a `getElementType` method that *casts* the `mlir::Type pointer` to the type that MLIR wants to capture from the external source.
 
 ## Patch discussion (verbatim)
 
