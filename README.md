@@ -74,6 +74,13 @@ end program sample
 
 OpenMP is a bunch of pragmas you can put in your code to tell the compiler how to handle them exactly. For example, `!$omp atomic read` above a `x = y` means the compiler should perform this atomically. OpenMP is a **dialect**. And it is upto compiler engineers to build support in both flang and mlir for OpenMP dialect.
 
+- OpenMP standard (updated till standard 5.1) has `hint` expressions attached with OpenMP constructs. These are mostly synchronization hints that you use provide to the compiler in order to optimize critical sections (thereby two most popular constructs here are `atomic` and `critical`). Few main types of hint expressions:
+    
+    -- **uncontended**: expect low contention. Means expect few threads will contend for this particular critical section
+    -- **contended**: expect high contention.
+    -- **speculative**: use speculative techniques like transactional memory. Just like DBMS involves transactions as a group (they are committed and rolled back as a group), similar ideas are ported to concurrent executions of critical sections
+    -- **non-speculative**: do not use speculative techniques as transactional memory
+
 ### MLIR
 
 - An infrastructure where you can define a bunch of things aiding your compiler infrastructure needs. You can define your own operations, type systems etc and reuse MLIR's pass management, threading etc to get a compiler infrastructure up and running really quick. For example, we import MLIR functionality into flang, lower PFT to MLIR, and let MLIR do its magic, and finally lower to LLVM. This integration is seemless.
