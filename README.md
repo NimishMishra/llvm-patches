@@ -2,6 +2,8 @@
 
 A bunch of things related to my work on LLVM compiler infrastructure
 
+Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://reviews.llvm.org/p/NimishMishra/)
+
 ## Patches
 
 [[Merged](https://github.com/llvm/llvm-project/commit/d4717b9b9def89c503a20eaf7700f87c4b52d530)][Test case for semantic checks for OpenMP parallel sections contruct](https://reviews.llvm.org/D111438)
@@ -81,7 +83,7 @@ OpenMP is a bunch of pragmas you can put in your code to tell the compiler how t
     -- **contended**: expect high contention.
     
     -- **speculative**: use speculative techniques like transactional memory. Just like DBMS involves transactions as a group (they are committed and rolled back as a group , similar ideas are ported to concurrent executions of critical sections
-    
+
     -- **non-speculative**: do not use speculative techniques as transactional memory
 
 - Getting expressions is one of the core things you have to perform a lot. The `GetExpr` interface is defined in `flang/include/flang/Semantics/tools.h`. In MLIR, use AbstractConverter's `genExprValue`; you may have to work with `fir::ExtendableValue` (which is further defined in `flang/Optimizer/Builder/BoxValue.h`). From here, you can extract `mlir::Value` through a `fir::getBase` (this gets the final value [the temporary variable number] from the computation of the entire expression.
