@@ -77,8 +77,11 @@ OpenMP is a bunch of pragmas you can put in your code to tell the compiler how t
 - OpenMP standard (updated till standard 5.1) has `hint` expressions attached with OpenMP constructs. These are mostly synchronization hints that you use provide to the compiler in order to optimize critical sections (thereby two most popular constructs here are `atomic` and `critical`). Few main types of hint expressions:
     
     -- **uncontended**: expect low contention. Means expect few threads will contend for this particular critical section
+
     -- **contended**: expect high contention.
-    -- **speculative**: use speculative techniques like transactional memory. Just like DBMS involves transactions as a group (they are committed and rolled back as a group), similar ideas are ported to concurrent executions of critical sections
+    
+    -- **speculative**: use speculative techniques like transactional memory. Just like DBMS involves transactions as a group (they are committed and rolled back as a group , similar ideas are ported to concurrent executions of critical sections
+    
     -- **non-speculative**: do not use speculative techniques as transactional memory
 
 - Getting expressions is one of the core things you have to perform a lot. The `GetExpr` interface is defined in `flang/include/flang/Semantics/tools.h`. In MLIR, use AbstractConverter's `genExprValue`; you may have to work with `fir::ExtendableValue` (which is further defined in `flang/Optimizer/Builder/BoxValue.h`). From here, you can extract `mlir::Value` through a `fir::getBase` (this gets the final value [the temporary variable number] from the computation of the entire expression.
