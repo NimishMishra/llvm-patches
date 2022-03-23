@@ -14,6 +14,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/063c5bc31b89d85aba9ea7c2aa0d2440ec468ed2)][Semantic checks for OpenMP constructs: sections and simd](https://reviews.llvm.org/D108904) 
 
+[Lowering for sections constructs](https://reviews.llvm.org/D122302)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
