@@ -16,6 +16,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/88d5289fc69d24e8490a064c87228d68c53e5d9c)][Lowering for sections constructs](https://reviews.llvm.org/D122302)
 
+[Lowering for atomic read and write constructs](https://reviews.llvm.org/D122725)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
