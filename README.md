@@ -18,6 +18,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Lowering for atomic read and write constructs](https://reviews.llvm.org/D122725)
 
+[Cherrypicking atomic operations downstream](https://github.com/flang-compiler/f18-llvm-project/pull/1570)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
