@@ -18,7 +18,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Lowering for atomic read and write constructs](https://reviews.llvm.org/D122725)
 
-[Merged(https://github.com/flang-compiler/f18-llvm-project/commit/ed5bf452f17805c5cac57433862076cec9469e22)][Cherrypicking atomic operations downstream](https://github.com/flang-compiler/f18-llvm-project/pull/1570)
+[[Merged](https://github.com/flang-compiler/f18-llvm-project/commit/ed5bf452f17805c5cac57433862076cec9469e22)][Cherrypicking atomic operations downstream](https://github.com/flang-compiler/f18-llvm-project/pull/1570)
 
 [Lowering for default clause](https://reviews.llvm.org/D123930)
 
