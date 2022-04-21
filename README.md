@@ -16,7 +16,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/88d5289fc69d24e8490a064c87228d68c53e5d9c)][Lowering for sections constructs](https://reviews.llvm.org/D122302)
 
-[Lowering for atomic read and write constructs](https://reviews.llvm.org/D122725)
+[[Merged](https://github.com/llvm/llvm-project/commit/00c511b35195616430112e5d537588dfdae42cba)][Lowering for atomic read and write constructs](https://reviews.llvm.org/D122725)
 
 [[Merged](https://github.com/flang-compiler/f18-llvm-project/commit/ed5bf452f17805c5cac57433862076cec9469e22)][Cherrypicking atomic operations downstream](https://github.com/flang-compiler/f18-llvm-project/pull/1570)
 
