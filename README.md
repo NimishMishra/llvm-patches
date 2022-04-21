@@ -22,6 +22,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Lowering for default clause](https://reviews.llvm.org/D123930)
 
+[Parser support for in_reduction clause on OpenMP task directive](https://reviews.llvm.org/D124156)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
