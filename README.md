@@ -24,6 +24,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Parser support for in_reduction clause on OpenMP task directive](https://reviews.llvm.org/D124156)
 
+[Lowering for atomic update construct](https://reviews.llvm.org/D125668)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
