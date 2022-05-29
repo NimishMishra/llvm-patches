@@ -26,6 +26,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Lowering for atomic update construct](https://reviews.llvm.org/D125668)
 
+[Additional semantic checks for openmp atomic construct](https://reviews.llvm.org/D126612)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
