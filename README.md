@@ -28,6 +28,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Additional semantic checks for openmp atomic construct](https://reviews.llvm.org/D126612)
 
+[Lowering for atomic capture construct](https://reviews.llvm.org/D127224)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
