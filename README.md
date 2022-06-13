@@ -30,6 +30,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Lowering for atomic capture construct](https://reviews.llvm.org/D127272)
 
+[Added semantic checks for atomic construct clauses](https://reviews.llvm.org/D127615)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
