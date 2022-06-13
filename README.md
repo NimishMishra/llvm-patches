@@ -32,6 +32,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Added semantic checks for atomic construct clauses](https://reviews.llvm.org/D127615)
 
+[Added semantic checks for atomic capture, write, and update statements](https://reviews.llvm.org/D127620)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
