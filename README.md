@@ -34,7 +34,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Added semantic checks for atomic capture, write, and update statements](https://reviews.llvm.org/D127620)
 
-[Refactor code related to OpenMP atomic memory order clause semantics](https://reviews.llvm.org/D127822)
+[[Merged](https://github.com/llvm/llvm-project/commit/c05b99971fa042ae75c1848e6597c068392d693b)][Refactor code related to OpenMP atomic memory order clause semantics](https://reviews.llvm.org/D127822)
 
 ## Additional notes
 
