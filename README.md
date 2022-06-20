@@ -38,6 +38,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Semantic checks for 'operator' in atomic update assignment statements](https://reviews.llvm.org/D128151)
 
+[Semantic checks for symbols in atomic update assignment statement](https://reviews.llvm.org/D128162)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
