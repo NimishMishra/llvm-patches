@@ -40,6 +40,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Semantic checks for symbols in atomic update assignment statement](https://reviews.llvm.org/D128162)
 
+[Allow default(none) to access variables with PARAMETER attribute](https://reviews.llvm.org/D129444)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
