@@ -40,7 +40,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Semantic checks for symbols in atomic update assignment statement](https://reviews.llvm.org/D128162)
 
-[Allow default(none) to access variables with PARAMETER attribute](https://reviews.llvm.org/D129444)
+[[Merged](https://github.com/llvm/llvm-project/commit/5cbe39ef880e0d8a61db111fca0b14b3ca17a17b)][Allow default(none) to access variables with PARAMETER attribute](https://reviews.llvm.org/D129444)
 
 ## Additional notes
 
