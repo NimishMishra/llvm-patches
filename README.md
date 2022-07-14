@@ -30,7 +30,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Lowering for atomic capture construct](https://reviews.llvm.org/D127272)
 
-[Added semantic checks for hint clause](https://reviews.llvm.org/D127615)
+[[Merged](https://github.com/llvm/llvm-project/commit/7dc18a62e40e241019ec77e70f01bc41d39ab748)][Added semantic checks for hint clause](https://reviews.llvm.org/D127615)
 
 [Added semantic checks for atomic capture, write, and update statements](https://reviews.llvm.org/D127620)
 
