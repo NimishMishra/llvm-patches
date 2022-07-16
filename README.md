@@ -42,7 +42,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/5cbe39ef880e0d8a61db111fca0b14b3ca17a17b)][Allow default(none) to access variables with PARAMETER attribute](https://reviews.llvm.org/D129444)
 
-[Fix warning due to uninitialized pointer dereference during atomic update lowering](https://reviews.llvm.org/D129914)
+[[Merged](https://github.com/llvm/llvm-project/commit/58753dea15c8ff72034e3e4a13b3a945aa295366)][Fix warning due to uninitialized pointer dereference during atomic update lowering](https://reviews.llvm.org/D129914)
 
 ## Additional notes
 
