@@ -20,7 +20,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/flang-compiler/f18-llvm-project/commit/ed5bf452f17805c5cac57433862076cec9469e22)][Cherrypicking atomic operations downstream](https://github.com/flang-compiler/f18-llvm-project/pull/1570)
 
-[Lowering for default clause](https://reviews.llvm.org/D123930)
+[[Merged](https://github.com/llvm/llvm-project/commit/435feefbdd6c91faf24fa5e69c4e7c3bc127568a)][Lowering for default clause](https://reviews.llvm.org/D123930)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/6a3c4a40f4ba6943c5902660858d0c3df2830330)][Parser support for in_reduction clause on OpenMP task directive](https://reviews.llvm.org/D124156)
 
