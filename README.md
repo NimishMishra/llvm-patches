@@ -58,6 +58,12 @@ A bunch of notes in addition to the discussion in the patches themselves
 
 - [D110714](https://reviews.llvm.org/D110714): contains a reusable `HasMember` way of recognising whether the `typename` in a templated function belongs to a certain variant. This could be treated as a complementary way to `std::visit`.
 
+- [D127047](https://reviews.llvm.org/D127047): contains ideas on greating global variables (`embox` ,`undefined`, and `has_value`). And a good example of using `std::function` as passing arguments to a function.
+
+### Fortran specific features
+
+- Printing an unassociated pointer or unallocated allocatable may cause one segfault in some cases if someone tries to test execution. So, add one external function call to handle unassociated pointer and unallocated allocatable variables.
+
 ### Parser
 
 - Possibly the most important source code resides in `llvm-project/flang/include/flang/Parser/parse-tree.h` which contains all the parse tree nodes' definition.
@@ -129,6 +135,10 @@ OpenMP is a bunch of pragmas you can put in your code to tell the compiler how t
 - Clang builds some AST and performs transformations on the same. This is fairly successful. But people have started looking at how retaining some of the high level semantics can help in better transformations. LLVM IR loses this context; thus MLIR hopes to retain such high level semantic information and perform transformations on the same.
 
 - **Dominance checking**: A part of code resides in `mlir/lib/IR/Verifier.cpp` which manipulates the regions of different things, understands what region envelops what region, and so on.
+
+#### FIR
+
+- Fortran has the concept of arrays whose lower bound, upper bound, and sizes are defined at runtime. This means we have to keep this information somewhere in memory. And the best place to do that is the array itself. Fortran array descriptors abstract these informations (how many dimensions, what the stride from one element to the next. It also contains type information for the type itself). In FIR dialect, the `fir.box` is used to say **this is a descriptor** and `fir.embox` is used to say **package this as a descriptor**.
 
 ### PFT to MLIR lowering
 
