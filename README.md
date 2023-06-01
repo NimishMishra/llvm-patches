@@ -46,7 +46,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/1f734b0d1731bf15fe2501ec04f65658ad4a87a6)][Handle private/firstprivate clauses on sections construct](https://reviews.llvm.org/D131463)
 
-[Handle lastprivate on sections construct](https://reviews.llvm.org/D133686)
+[[Merged](https://reviews.llvm.org/rGf49b6afc231242dfee027d5da69734836097cd43)][Handle lastprivate on sections construct](https://reviews.llvm.org/D133686)
 
 ## Additional notes
 
