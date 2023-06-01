@@ -48,6 +48,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://reviews.llvm.org/rGf49b6afc231242dfee027d5da69734836097cd43)][Handle lastprivate on sections construct](https://reviews.llvm.org/D133686)
 
+[[Merged](https://github.com/llvm/llvm-project/commit/e5aa6eeb4c474de99c44a667e3852f90e3774396)][Verify support for private/firstprivate on unstructured sections](https://reviews.llvm.org/D145352)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
