@@ -50,6 +50,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/e5aa6eeb4c474de99c44a667e3852f90e3774396)][Verify support for private/firstprivate on unstructured sections](https://reviews.llvm.org/D145352)
 
+[[Merged(https://github.com/llvm/llvm-project/commit/89ebea8c1e6ff3dfd37943fdc01df409e9bd1e11)]][Fixed internal compiler error with atomic update operation verification](https://reviews.llvm.org/D153217)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
