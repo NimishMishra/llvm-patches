@@ -52,6 +52,14 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged(https://github.com/llvm/llvm-project/commit/89ebea8c1e6ff3dfd37943fdc01df409e9bd1e11)]][Fixed internal compiler error with atomic update operation verification](https://reviews.llvm.org/D153217)
 
+[[Merged](https://github.com/llvm/llvm-project/commit/2cb6d0c70bff616cce4dbd4cbdffc085175c739f)][Translating if and final clauses for task construct](https://reviews.llvm.org/D130704)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/b4c54b20270ea1f0eac574785156c668930da5c5)][Support common block in OpenMP private clause](https://reviews.llvm.org/D127215)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/f752265231c2d15590a53e45bcc850acf2450dfc)][Support for privatization in common block](https://reviews.llvm.org/D156120)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/da1f1b229246a64ebf385a133c5528a8ce622731)] Prevent extraneous copy in D156120
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
