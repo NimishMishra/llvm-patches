@@ -4,6 +4,12 @@ A bunch of things related to my work on LLVM compiler infrastructure
 
 Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://reviews.llvm.org/p/NimishMishra/)
 
+## Issues
+
+[[flang][OpenMP][omp2012] Type confusion in reduction clause and fortran intrinsic](https://github.com/llvm/llvm-project/issues/67332)
+
+[Crash observed in threadprivatised common block](https://github.com/llvm/llvm-project/issues/65034)
+
 ## Patches
 
 [[Merged](https://github.com/llvm/llvm-project/commit/d4717b9b9def89c503a20eaf7700f87c4b52d530)][Test case for semantic checks for OpenMP parallel sections contruct](https://reviews.llvm.org/D111438)
@@ -59,6 +65,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 [[Merged](https://github.com/llvm/llvm-project/commit/f752265231c2d15590a53e45bcc850acf2450dfc)][Support for privatization in common block](https://reviews.llvm.org/D156120)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/da1f1b229246a64ebf385a133c5528a8ce622731)] Prevent extraneous copy in D156120
+
+[Fix common block missing symbol crash](https://github.com/llvm/llvm-project/pull/67330) in response to issue [Crash observed in threadprivatised common block](https://github.com/llvm/llvm-project/issues/65034)
 
 ## Additional notes
 
