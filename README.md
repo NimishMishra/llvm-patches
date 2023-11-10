@@ -68,6 +68,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/91f92e6a6bfa4a1d963234ba70adb5a7957aeb1e) Fix common block missing symbol crash](https://github.com/llvm/llvm-project/pull/67330) in response to issue [Crash observed in threadprivatised common block](https://github.com/llvm/llvm-project/issues/65034)
 
+[[Merged](https://github.com/llvm/llvm-project/commit/c4d73216150fbc9679fe999e70396262cf352d15)] [Skip default privatization for crashing case](https://github.com/llvm/llvm-project/pull/71922)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
