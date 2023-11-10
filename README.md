@@ -66,7 +66,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/da1f1b229246a64ebf385a133c5528a8ce622731)] Prevent extraneous copy in D156120
 
-[Fix common block missing symbol crash](https://github.com/llvm/llvm-project/pull/67330) in response to issue [Crash observed in threadprivatised common block](https://github.com/llvm/llvm-project/issues/65034)
+[[Merged](https://github.com/llvm/llvm-project/commit/91f92e6a6bfa4a1d963234ba70adb5a7957aeb1e) Fix common block missing symbol crash](https://github.com/llvm/llvm-project/pull/67330) in response to issue [Crash observed in threadprivatised common block](https://github.com/llvm/llvm-project/issues/65034)
 
 ## Additional notes
 
