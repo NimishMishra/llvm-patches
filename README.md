@@ -70,6 +70,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/c4d73216150fbc9679fe999e70396262cf352d15)] [Skip default privatization for crashing case](https://github.com/llvm/llvm-project/pull/71922)
 
+[[Merged](https://github.com/llvm/llvm-project/commit/956cf0e5de4b816ccba64206ead8bc2d4fd22158)] [Fix min reduction initialization](https://github.com/llvm/llvm-project/pull/73102)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
