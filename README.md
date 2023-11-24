@@ -10,6 +10,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Crash observed in threadprivatised common block](https://github.com/llvm/llvm-project/issues/65034)
 
+[reduction(min) gives an inexact negative value close to zero](https://github.com/llvm/llvm-project/issues/73101)
+
 ## Patches
 
 [[Merged](https://github.com/llvm/llvm-project/commit/d4717b9b9def89c503a20eaf7700f87c4b52d530)][Test case for semantic checks for OpenMP parallel sections contruct](https://reviews.llvm.org/D111438)
