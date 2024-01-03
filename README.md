@@ -74,7 +74,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/956cf0e5de4b816ccba64206ead8bc2d4fd22158)] [Fix min reduction initialization](https://github.com/llvm/llvm-project/pull/73102)
 
-[[Merged](https://github.com/llvm/llvm-project/commit/6023e2476b5cb2fd84dcb74d805ae2e322160111)] [Error out when assumed rank variable in used as selector in SELECT TYPE statement](https://github.com/llvm/llvm-project/pull/74286)
+[[Merged](https://github.com/llvm/llvm-project/commit/6023e2476b5cb2fd84dcb74d805ae2e322160111)] [Error out when assumed rank variable in used as selector in SELECT TYPE statement](https://github.com/llvm/llvm-project/pull/74286). Relevant [issue](https://github.com/llvm/llvm-project/issues/74285)
 
 ## Additional notes
 
