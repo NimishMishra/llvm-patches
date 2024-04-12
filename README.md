@@ -76,6 +76,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/6023e2476b5cb2fd84dcb74d805ae2e322160111)] [Error out when assumed rank variable in used as selector in SELECT TYPE statement](https://github.com/llvm/llvm-project/pull/74286). Relevant [issue](https://github.com/llvm/llvm-project/issues/74285)
 
+[[Merged](https://github.com/llvm/llvm-project/commit/506ff547924ab81123865964b7d998a5a378330a)] [[flang][Semantics] Threadprivate symbols are ignored in presence of default clause](https://github.com/llvm/llvm-project/pull/78283). Relevant [issue](https://github.com/llvm/llvm-project/issues/78282)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
