@@ -78,6 +78,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/506ff547924ab81123865964b7d998a5a378330a)] [[flang][Semantics] Threadprivate symbols are ignored in presence of default clause](https://github.com/llvm/llvm-project/pull/78283). Relevant [issue](https://github.com/llvm/llvm-project/issues/78282)
 
+[[Merged](https://github.com/llvm/llvm-project/commit/37f6ba4fb2db2c78cda7d0a69cd0a2eff2b924e3)] [[flang][OpenMP] Fix construct privatization in default clause](https://github.com/llvm/llvm-project/pull/72510). Relevant [issue](https://github.com/llvm/llvm-project/issues/71914) and [issue](https://github.com/llvm/llvm-project/issues/71915)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
