@@ -80,6 +80,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/37f6ba4fb2db2c78cda7d0a69cd0a2eff2b924e3)] [[flang][OpenMP] Fix construct privatization in default clause](https://github.com/llvm/llvm-project/pull/72510). Relevant [issue](https://github.com/llvm/llvm-project/issues/71914) and [issue](https://github.com/llvm/llvm-project/issues/71915)
 
+[[Merged](https://github.com/llvm/llvm-project/commit/d94582eea410a04f9f84e39a54276a8418aa2dbb)] [[flang][OpenMP] Add test for checking overloaded operator in atomic update](https://github.com/llvm/llvm-project/pull/88471)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
