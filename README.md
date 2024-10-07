@@ -84,6 +84,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/aec87a2143c01039578ceaed752ca2cb1dc83ff7)] [[llvm][mlir][flang][OpenMP] Emit __atomic_load and __atomic_compare_exchange libcalls for complex types in atomic update](https://github.com/llvm/llvm-project/pull/92364). Relevant issues: [#83760](https://github.com/llvm/llvm-project/issues/83760) and [#75138](https://github.com/llvm/llvm-project/issues/75138) and [#80397](https://github.com/llvm/llvm-project/issues/80397)
 
+[[Merged](https://github.com/llvm/llvm-project/commit/612760ede66142b89f626336b4ba7b2964641afb)][[flang] Fix aarch64 CI failures from #92364](https://github.com/llvm/llvm-project/pull/110969)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
