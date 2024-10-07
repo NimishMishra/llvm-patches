@@ -86,6 +86,9 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/612760ede66142b89f626336b4ba7b2964641afb)][[flang] Fix aarch64 CI failures from #92364](https://github.com/llvm/llvm-project/pull/110969)
 
+[Merged](https://github.com/llvm/llvm-project/commit/71b2c4dbc7cc28007849434303e6bd2408db5b3b) [flang] Remove failing integration test
+
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
