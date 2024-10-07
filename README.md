@@ -82,6 +82,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/d94582eea410a04f9f84e39a54276a8418aa2dbb)] [[flang][OpenMP] Add test for checking overloaded operator in atomic update](https://github.com/llvm/llvm-project/pull/88471)
 
+[[Merged](https://github.com/llvm/llvm-project/commit/aec87a2143c01039578ceaed752ca2cb1dc83ff7)] [[llvm][mlir][flang][OpenMP] Emit __atomic_load and __atomic_compare_exchange libcalls for complex types in atomic update](https://github.com/llvm/llvm-project/pull/92364). Relevant issues: [#83760](https://github.com/llvm/llvm-project/issues/83760) and [#75138](https://github.com/llvm/llvm-project/issues/75138) and [#80397](https://github.com/llvm/llvm-project/issues/80397)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
