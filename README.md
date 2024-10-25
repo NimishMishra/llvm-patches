@@ -88,6 +88,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Merged](https://github.com/llvm/llvm-project/commit/71b2c4dbc7cc28007849434303e6bd2408db5b3b) [flang] Remove failing integration test
 
+[[Merged](https://github.com/llvm/llvm-project/commit/1cbc015551e1b2445cb215a74d1eccab80041998)] [[flang][OpenMP] Error out when CHARACTER type is used in atomic constructs](https://github.com/llvm/llvm-project/pull/113045)
 
 ## Additional notes
 
