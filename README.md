@@ -94,6 +94,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/645e6f11145a49831accf219ed444aa5edd0148a)] [[llvm][OpenMP] Handle complex types in atomic read](https://github.com/llvm/llvm-project/pull/111377)
 
+[[Merged](https://github.com/llvm/llvm-project/commit/eafa15009e95c1c7eed3026218a73f09e1da3288)] [[flang][OpenMP] Enable lastprivate on simd](https://github.com/llvm/llvm-project/pull/93786)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
