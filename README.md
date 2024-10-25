@@ -92,6 +92,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [Merged](https://github.com/llvm/llvm-project/commit/b39760c4cea0e2cd29fdc493dec162babc796a9a) [flang][NFC] Fix failing atomic tests
 
+[[Merged](https://github.com/llvm/llvm-project/commit/645e6f11145a49831accf219ed444aa5edd0148a)] [[llvm][OpenMP] Handle complex types in atomic read](https://github.com/llvm/llvm-project/pull/111377)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
