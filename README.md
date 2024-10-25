@@ -90,6 +90,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/1cbc015551e1b2445cb215a74d1eccab80041998)] [[flang][OpenMP] Error out when CHARACTER type is used in atomic constructs](https://github.com/llvm/llvm-project/pull/113045)
 
+[Merged](https://github.com/llvm/llvm-project/commit/b39760c4cea0e2cd29fdc493dec162babc796a9a) [flang][NFC] Fix failing atomic tests
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
