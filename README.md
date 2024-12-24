@@ -14,6 +14,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 ## Patches
 
+[[Merged](https://github.com/llvm/llvm-project/commit/9eb4056144a9d2e940272ba9e9675acaa3fbb354)] [[mlir][llvm] Translation support for task detach](https://github.com/llvm/llvm-project/pull/116601)
+
 [[Merged](https://github.com/llvm/llvm-project/commit/edc50f3954af081b385cb03961899b5da1f1eb6b)] [[flang][OpenMP] Add lowering support for task detach](https://github.com/llvm/llvm-project/pull/119128)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/b9e3a769b99e9dafa3e5205dbbef9fae8573e4e2)] [[flang][mlir][llvm][OpenMP] Add lowering and translation support for mergeable clause on task](https://github.com/llvm/llvm-project/pull/114662)
