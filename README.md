@@ -14,93 +14,93 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 ## Patches
 
-[[Merged](https://github.com/llvm/llvm-project/commit/d4717b9b9def89c503a20eaf7700f87c4b52d530)][Test case for semantic checks for OpenMP parallel sections contruct](https://reviews.llvm.org/D111438)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/3519dcfec22963fbb84e154cecc2df22e6c7724f)][Semantic checks for OpenMP atomic construct](https://reviews.llvm.org/D110714)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/fe2d053c4505b7ccc8a86e266e68d2f97aaca1e1)][Semantic checks for OpenMP critical construct name resolution](https://reviews.llvm.org/D110502)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/063c5bc31b89d85aba9ea7c2aa0d2440ec468ed2)][Semantic checks for OpenMP constructs: sections and simd](https://reviews.llvm.org/D108904) 
-
-[[Merged](https://github.com/llvm/llvm-project/commit/88d5289fc69d24e8490a064c87228d68c53e5d9c)][Lowering for sections constructs](https://reviews.llvm.org/D122302)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/00c511b35195616430112e5d537588dfdae42cba)][Lowering for atomic read and write constructs](https://reviews.llvm.org/D122725)
-
-[[Merged](https://github.com/flang-compiler/f18-llvm-project/commit/ed5bf452f17805c5cac57433862076cec9469e22)][Cherrypicking atomic operations downstream](https://github.com/flang-compiler/f18-llvm-project/pull/1570)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/435feefbdd6c91faf24fa5e69c4e7c3bc127568a)][Lowering for default clause](https://reviews.llvm.org/D123930)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/6a3c4a40f4ba6943c5902660858d0c3df2830330)][Parser support for in_reduction clause on OpenMP task directive](https://reviews.llvm.org/D124156)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/a56b76d9ca520b4495da2a984ff481a6487736fc)][Lowering for atomic update construct](https://reviews.llvm.org/D125668)
-
-[Additional semantic checks for openmp atomic construct](https://reviews.llvm.org/D126612)
-
-[Lowering for atomic capture construct](https://reviews.llvm.org/D127272)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/7dc18a62e40e241019ec77e70f01bc41d39ab748)][Added semantic checks for hint clause](https://reviews.llvm.org/D127615)
-
-[Added semantic checks for atomic capture, write, and update statements](https://reviews.llvm.org/D127620)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/c05b99971fa042ae75c1848e6597c068392d693b)][Refactor code related to OpenMP atomic memory order clause semantics](https://reviews.llvm.org/D127822)
-
-[Semantic checks for 'operator' in atomic update assignment statements](https://reviews.llvm.org/D128151)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/0ff9625c0a15a80d2375c1ab6fb3fd8439b3c78b)][Semantic checks for symbols in atomic update assignment statement](https://reviews.llvm.org/D128162)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/5cbe39ef880e0d8a61db111fca0b14b3ca17a17b)][Allow default(none) to access variables with PARAMETER attribute](https://reviews.llvm.org/D129444)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/58753dea15c8ff72034e3e4a13b3a945aa295366)][Fix warning due to uninitialized pointer dereference during atomic update lowering](https://reviews.llvm.org/D129914)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/1f734b0d1731bf15fe2501ec04f65658ad4a87a6)][Handle private/firstprivate clauses on sections construct](https://reviews.llvm.org/D131463)
-
-[[Merged](https://reviews.llvm.org/rGf49b6afc231242dfee027d5da69734836097cd43)][Handle lastprivate on sections construct](https://reviews.llvm.org/D133686)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/e5aa6eeb4c474de99c44a667e3852f90e3774396)][Verify support for private/firstprivate on unstructured sections](https://reviews.llvm.org/D145352)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/89ebea8c1e6ff3dfd37943fdc01df409e9bd1e11)][Fixed internal compiler error with atomic update operation verification](https://reviews.llvm.org/D153217)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/2cb6d0c70bff616cce4dbd4cbdffc085175c739f)][Translating if and final clauses for task construct](https://reviews.llvm.org/D130704)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/b4c54b20270ea1f0eac574785156c668930da5c5)][Support common block in OpenMP private clause](https://reviews.llvm.org/D127215)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/f752265231c2d15590a53e45bcc850acf2450dfc)][Support for privatization in common block](https://reviews.llvm.org/D156120)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/da1f1b229246a64ebf385a133c5528a8ce622731)] Prevent extraneous copy in D156120
-
-[[Merged](https://github.com/llvm/llvm-project/commit/91f92e6a6bfa4a1d963234ba70adb5a7957aeb1e) Fix common block missing symbol crash](https://github.com/llvm/llvm-project/pull/67330) in response to issue [Crash observed in threadprivatised common block](https://github.com/llvm/llvm-project/issues/65034)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/c4d73216150fbc9679fe999e70396262cf352d15)] [Skip default privatization for crashing case](https://github.com/llvm/llvm-project/pull/71922)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/956cf0e5de4b816ccba64206ead8bc2d4fd22158)] [Fix min reduction initialization](https://github.com/llvm/llvm-project/pull/73102)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/6023e2476b5cb2fd84dcb74d805ae2e322160111)] [Error out when assumed rank variable in used as selector in SELECT TYPE statement](https://github.com/llvm/llvm-project/pull/74286). Relevant [issue](https://github.com/llvm/llvm-project/issues/74285)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/506ff547924ab81123865964b7d998a5a378330a)] [[flang][Semantics] Threadprivate symbols are ignored in presence of default clause](https://github.com/llvm/llvm-project/pull/78283). Relevant [issue](https://github.com/llvm/llvm-project/issues/78282)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/37f6ba4fb2db2c78cda7d0a69cd0a2eff2b924e3)] [[flang][OpenMP] Fix construct privatization in default clause](https://github.com/llvm/llvm-project/pull/72510). Relevant [issue](https://github.com/llvm/llvm-project/issues/71914) and [issue](https://github.com/llvm/llvm-project/issues/71915)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/d94582eea410a04f9f84e39a54276a8418aa2dbb)] [[flang][OpenMP] Add test for checking overloaded operator in atomic update](https://github.com/llvm/llvm-project/pull/88471)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/aec87a2143c01039578ceaed752ca2cb1dc83ff7)] [[llvm][mlir][flang][OpenMP] Emit __atomic_load and __atomic_compare_exchange libcalls for complex types in atomic update](https://github.com/llvm/llvm-project/pull/92364). Relevant issues: [#83760](https://github.com/llvm/llvm-project/issues/83760) and [#75138](https://github.com/llvm/llvm-project/issues/75138) and [#80397](https://github.com/llvm/llvm-project/issues/80397)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/612760ede66142b89f626336b4ba7b2964641afb)][[flang] Fix aarch64 CI failures from #92364](https://github.com/llvm/llvm-project/pull/110969)
-
-[Merged](https://github.com/llvm/llvm-project/commit/71b2c4dbc7cc28007849434303e6bd2408db5b3b) [flang] Remove failing integration test
-
-[[Merged](https://github.com/llvm/llvm-project/commit/1cbc015551e1b2445cb215a74d1eccab80041998)] [[flang][OpenMP] Error out when CHARACTER type is used in atomic constructs](https://github.com/llvm/llvm-project/pull/113045)
-
-[Merged](https://github.com/llvm/llvm-project/commit/b39760c4cea0e2cd29fdc493dec162babc796a9a) [flang][NFC] Fix failing atomic tests
-
-[[Merged](https://github.com/llvm/llvm-project/commit/645e6f11145a49831accf219ed444aa5edd0148a)] [[llvm][OpenMP] Handle complex types in atomic read](https://github.com/llvm/llvm-project/pull/111377)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/eafa15009e95c1c7eed3026218a73f09e1da3288)] [[flang][OpenMP] Enable lastprivate on simd](https://github.com/llvm/llvm-project/pull/93786)
-
-[[Merged](https://github.com/llvm/llvm-project/commit/506ff547924ab81123865964b7d998a5a378330a)] [[flang][Semantics] Fix updating flags of threadprivate symbols in presence of default clause](https://github.com/llvm/llvm-project/pull/78283)
+[[Merged](https://github.com/llvm/llvm-project/commit/24fc8f01a40310e91838ab742b4940369786ba90)] [[llvm][OpenMP][NFC] Cleanup AtomicInfo](https://github.com/llvm/llvm-project/pull/119199)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/0653698d8637b8d565cbf59de591e2d8c61c20cc)] [[[flang][OpenMP] Add parsing support for Task detach](https://github.com/llvm/llvm-project/pull/112312)]
 
-[[Merged](https://github.com/llvm/llvm-project/commit/24fc8f01a40310e91838ab742b4940369786ba90)] [[llvm][OpenMP][NFC] Cleanup AtomicInfo](https://github.com/llvm/llvm-project/pull/119199)
+[[Merged](https://github.com/llvm/llvm-project/commit/506ff547924ab81123865964b7d998a5a378330a)] [[flang][Semantics] Fix updating flags of threadprivate symbols in presence of default clause](https://github.com/llvm/llvm-project/pull/78283)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/eafa15009e95c1c7eed3026218a73f09e1da3288)] [[flang][OpenMP] Enable lastprivate on simd](https://github.com/llvm/llvm-project/pull/93786)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/645e6f11145a49831accf219ed444aa5edd0148a)] [[llvm][OpenMP] Handle complex types in atomic read](https://github.com/llvm/llvm-project/pull/111377)
+
+[Merged](https://github.com/llvm/llvm-project/commit/b39760c4cea0e2cd29fdc493dec162babc796a9a) [flang][NFC] Fix failing atomic tests
+
+[[Merged](https://github.com/llvm/llvm-project/commit/1cbc015551e1b2445cb215a74d1eccab80041998)] [[flang][OpenMP] Error out when CHARACTER type is used in atomic constructs](https://github.com/llvm/llvm-project/pull/113045)
+
+[Merged](https://github.com/llvm/llvm-project/commit/71b2c4dbc7cc28007849434303e6bd2408db5b3b) [flang] Remove failing integration test
+
+[[Merged](https://github.com/llvm/llvm-project/commit/612760ede66142b89f626336b4ba7b2964641afb)][[flang] Fix aarch64 CI failures from #92364](https://github.com/llvm/llvm-project/pull/110969)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/aec87a2143c01039578ceaed752ca2cb1dc83ff7)] [[llvm][mlir][flang][OpenMP] Emit __atomic_load and __atomic_compare_exchange libcalls for complex types in atomic update](https://github.com/llvm/llvm-project/pull/92364). Relevant issues: [#83760](https://github.com/llvm/llvm-project/issues/83760) and [#75138](https://github.com/llvm/llvm-project/issues/75138) and [#80397](https://github.com/llvm/llvm-project/issues/80397)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/d94582eea410a04f9f84e39a54276a8418aa2dbb)] [[flang][OpenMP] Add test for checking overloaded operator in atomic update](https://github.com/llvm/llvm-project/pull/88471)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/37f6ba4fb2db2c78cda7d0a69cd0a2eff2b924e3)] [[flang][OpenMP] Fix construct privatization in default clause](https://github.com/llvm/llvm-project/pull/72510). Relevant [issue](https://github.com/llvm/llvm-project/issues/71914) and [issue](https://github.com/llvm/llvm-project/issues/71915)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/506ff547924ab81123865964b7d998a5a378330a)] [[flang][Semantics] Threadprivate symbols are ignored in presence of default clause](https://github.com/llvm/llvm-project/pull/78283). Relevant [issue](https://github.com/llvm/llvm-project/issues/78282)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/6023e2476b5cb2fd84dcb74d805ae2e322160111)] [Error out when assumed rank variable in used as selector in SELECT TYPE statement](https://github.com/llvm/llvm-project/pull/74286). Relevant [issue](https://github.com/llvm/llvm-project/issues/74285)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/956cf0e5de4b816ccba64206ead8bc2d4fd22158)] [Fix min reduction initialization](https://github.com/llvm/llvm-project/pull/73102)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/c4d73216150fbc9679fe999e70396262cf352d15)] [Skip default privatization for crashing case](https://github.com/llvm/llvm-project/pull/71922)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/91f92e6a6bfa4a1d963234ba70adb5a7957aeb1e) Fix common block missing symbol crash](https://github.com/llvm/llvm-project/pull/67330) in response to issue [Crash observed in threadprivatised common block](https://github.com/llvm/llvm-project/issues/65034)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/da1f1b229246a64ebf385a133c5528a8ce622731)] Prevent extraneous copy in D156120
+
+[[Merged](https://github.com/llvm/llvm-project/commit/f752265231c2d15590a53e45bcc850acf2450dfc)][Support for privatization in common block](https://reviews.llvm.org/D156120)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/b4c54b20270ea1f0eac574785156c668930da5c5)][Support common block in OpenMP private clause](https://reviews.llvm.org/D127215)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/2cb6d0c70bff616cce4dbd4cbdffc085175c739f)][Translating if and final clauses for task construct](https://reviews.llvm.org/D130704)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/89ebea8c1e6ff3dfd37943fdc01df409e9bd1e11)][Fixed internal compiler error with atomic update operation verification](https://reviews.llvm.org/D153217)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/e5aa6eeb4c474de99c44a667e3852f90e3774396)][Verify support for private/firstprivate on unstructured sections](https://reviews.llvm.org/D145352)
+
+[[Merged](https://reviews.llvm.org/rGf49b6afc231242dfee027d5da69734836097cd43)][Handle lastprivate on sections construct](https://reviews.llvm.org/D133686)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/1f734b0d1731bf15fe2501ec04f65658ad4a87a6)][Handle private/firstprivate clauses on sections construct](https://reviews.llvm.org/D131463)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/58753dea15c8ff72034e3e4a13b3a945aa295366)][Fix warning due to uninitialized pointer dereference during atomic update lowering](https://reviews.llvm.org/D129914)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/5cbe39ef880e0d8a61db111fca0b14b3ca17a17b)][Allow default(none) to access variables with PARAMETER attribute](https://reviews.llvm.org/D129444)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/0ff9625c0a15a80d2375c1ab6fb3fd8439b3c78b)][Semantic checks for symbols in atomic update assignment statement](https://reviews.llvm.org/D128162)
+
+[Semantic checks for 'operator' in atomic update assignment statements](https://reviews.llvm.org/D128151)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/c05b99971fa042ae75c1848e6597c068392d693b)][Refactor code related to OpenMP atomic memory order clause semantics](https://reviews.llvm.org/D127822)
+
+[Added semantic checks for atomic capture, write, and update statements](https://reviews.llvm.org/D127620)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/7dc18a62e40e241019ec77e70f01bc41d39ab748)][Added semantic checks for hint clause](https://reviews.llvm.org/D127615)
+
+[Lowering for atomic capture construct](https://reviews.llvm.org/D127272)
+
+[Additional semantic checks for openmp atomic construct](https://reviews.llvm.org/D126612)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/a56b76d9ca520b4495da2a984ff481a6487736fc)][Lowering for atomic update construct](https://reviews.llvm.org/D125668)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/6a3c4a40f4ba6943c5902660858d0c3df2830330)][Parser support for in_reduction clause on OpenMP task directive](https://reviews.llvm.org/D124156)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/435feefbdd6c91faf24fa5e69c4e7c3bc127568a)][Lowering for default clause](https://reviews.llvm.org/D123930)
+
+[[Merged](https://github.com/flang-compiler/f18-llvm-project/commit/ed5bf452f17805c5cac57433862076cec9469e22)][Cherrypicking atomic operations downstream](https://github.com/flang-compiler/f18-llvm-project/pull/1570)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/00c511b35195616430112e5d537588dfdae42cba)][Lowering for atomic read and write constructs](https://reviews.llvm.org/D122725)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/88d5289fc69d24e8490a064c87228d68c53e5d9c)][Lowering for sections constructs](https://reviews.llvm.org/D122302)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/063c5bc31b89d85aba9ea7c2aa0d2440ec468ed2)][Semantic checks for OpenMP constructs: sections and simd](https://reviews.llvm.org/D108904) 
+
+[[Merged](https://github.com/llvm/llvm-project/commit/fe2d053c4505b7ccc8a86e266e68d2f97aaca1e1)][Semantic checks for OpenMP critical construct name resolution](https://reviews.llvm.org/D110502)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/3519dcfec22963fbb84e154cecc2df22e6c7724f)][Semantic checks for OpenMP atomic construct](https://reviews.llvm.org/D110714)
+
+[[Merged](https://github.com/llvm/llvm-project/commit/d4717b9b9def89c503a20eaf7700f87c4b52d530)][Test case for semantic checks for OpenMP parallel sections contruct](https://reviews.llvm.org/D111438)
 
 ## Additional notes
 
