@@ -100,6 +100,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 [[Merged](https://github.com/llvm/llvm-project/commit/0653698d8637b8d565cbf59de591e2d8c61c20cc)] [[[flang][OpenMP] Add parsing support for Task detach](https://github.com/llvm/llvm-project/pull/112312)]
 
+[[Merged](https://github.com/llvm/llvm-project/commit/24fc8f01a40310e91838ab742b4940369786ba90)] [[llvm][OpenMP][NFC] Cleanup AtomicInfo](https://github.com/llvm/llvm-project/pull/119199)
+
 ## Additional notes
 
 A bunch of notes in addition to the discussion in the patches themselves
