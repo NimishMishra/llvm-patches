@@ -14,6 +14,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 ## Patches
 
+[[Merged](https://github.com/llvm/llvm-project/commit/b9e3a769b99e9dafa3e5205dbbef9fae8573e4e2)] [[flang][mlir][llvm][OpenMP] Add lowering and translation support for mergeable clause on task](https://github.com/llvm/llvm-project/pull/114662)
+
 [[Merged](https://github.com/llvm/llvm-project/commit/24fc8f01a40310e91838ab742b4940369786ba90)] [[llvm][OpenMP][NFC] Cleanup AtomicInfo](https://github.com/llvm/llvm-project/pull/119199)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/0653698d8637b8d565cbf59de591e2d8c61c20cc)] [[[flang][OpenMP] Add parsing support for Task detach](https://github.com/llvm/llvm-project/pull/112312)]
@@ -101,6 +103,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 [[Merged](https://github.com/llvm/llvm-project/commit/3519dcfec22963fbb84e154cecc2df22e6c7724f)][Semantic checks for OpenMP atomic construct](https://reviews.llvm.org/D110714)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/d4717b9b9def89c503a20eaf7700f87c4b52d530)][Test case for semantic checks for OpenMP parallel sections contruct](https://reviews.llvm.org/D111438)
+
 
 ## Additional notes
 
