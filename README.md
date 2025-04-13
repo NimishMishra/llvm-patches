@@ -14,6 +14,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 ## Patches
 
+[[Merged](https://github.com/llvm/llvm-project/commit/0ae1f0a31062f2447c04ec99ec0933cd71c21224)] [[flang] Rely on global initialization for simpler derived types](https://github.com/llvm/llvm-project/pull/114002)
+
 [[Merged](https://github.com/llvm/llvm-project/commit/53fa92dcad49466412a139eef223710bf5891213)] [[mlir][llvm][OpenMP] Hoist __atomic_load alloca](https://github.com/llvm/llvm-project/pull/132888) Fixed [#120724](https://github.com/llvm/llvm-project/issues/120724)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/d7e48fbf205a01fcbc109b2555b12aa0d37845a4)] [[llvm][OpenMP] Add implicit cast to omp.atomic.read](https://github.com/llvm/llvm-project/pull/114659) Fixed [#112908](https://github.com/llvm/llvm-project/issues/112908)
