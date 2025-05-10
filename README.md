@@ -14,7 +14,7 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 ## Patches
 
-[[Merged](https://github.com/llvm/llvm-project/commit/c61746650178c117996e1787617f36ccda7233f7)] [[flang][llvm][OpenMP] Add implicit casts to omp.atomic]
+[[Merged](https://github.com/llvm/llvm-project/commit/c61746650178c117996e1787617f36ccda7233f7)] [[flang][llvm][OpenMP] Add implicit casts to omp.atomic](https://github.com/llvm/llvm-project/pull/131603)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/b62afbccc8da8a14d06db68cd58cb48a14d79f91)] [[mlir][OpenMP] Add __atomic_store to AtomicInfo](https://github.com/llvm/llvm-project/pull/121055) Fixes issues [#113479](https://github.com/llvm/llvm-project/issues/113479) and [#115652](https://github.com/llvm/llvm-project/issues/115652)
 
