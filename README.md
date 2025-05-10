@@ -14,6 +14,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 ## Patches
 
+[[Merged](https://github.com/llvm/llvm-project/commit/e1fed24034fee3f45bc17252ced5ee29ab6b5408)] [[flang][OpenMP] Fix fir.convert in omp.atomic.update region](https://github.com/llvm/llvm-project/pull/138397) Fixes issue [#138396](https://github.com/llvm/llvm-project/issues/138396)
+
 [[Merged](https://github.com/llvm/llvm-project/commit/7aed77ef954f83cc52dad3eba4f51470e21b1cb0)] [[flang][OpenMP] Add implicit casts for omp.atomic.capture](https://github.com/llvm/llvm-project/pull/138163) Fixes issues [#138123](https://github.com/llvm/llvm-project/issues/138123) and [#94177](https://github.com/llvm/llvm-project/issues/94177)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/c61746650178c117996e1787617f36ccda7233f7)] [[flang][llvm][OpenMP] Add implicit casts to omp.atomic](https://github.com/llvm/llvm-project/pull/131603)
