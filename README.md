@@ -14,6 +14,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 ## Patches
 
+[[Merged](https://github.com/llvm/llvm-project/commit/0baacd1a58420f7e4da14faa1f0e9a21d5294a6a)] [[flang][OpenMP] Support MLIR lowering of linear clause for omp.wsloop] (https://github.com/llvm/llvm-project/pull/139385)
+
 [[Merged](https://github.com/llvm/llvm-project/commit/e1fed24034fee3f45bc17252ced5ee29ab6b5408)] [[flang][OpenMP] Fix fir.convert in omp.atomic.update region](https://github.com/llvm/llvm-project/pull/138397) Fixes issue [#138396](https://github.com/llvm/llvm-project/issues/138396)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/7aed77ef954f83cc52dad3eba4f51470e21b1cb0)] [[flang][OpenMP] Add implicit casts for omp.atomic.capture](https://github.com/llvm/llvm-project/pull/138163) Fixes issues [#138123](https://github.com/llvm/llvm-project/issues/138123) and [#94177](https://github.com/llvm/llvm-project/issues/94177)
