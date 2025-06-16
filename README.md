@@ -14,6 +14,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 ## Patches
 
+[[Merged](https://github.com/llvm/llvm-project/commit/bf1fe6eb3312c5608c96135405a6654f789a6c79)] [[mlir][OpenMP] Reintroduce TODO for translation of linear clause](https://github.com/llvm/llvm-project/pull/143531)
+
 [[Merged](https://github.com/llvm/llvm-project/commit/0baacd1a58420f7e4da14faa1f0e9a21d5294a6a)] [[flang][OpenMP] Support MLIR lowering of linear clause for omp.wsloop] (https://github.com/llvm/llvm-project/pull/139385)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/e1fed24034fee3f45bc17252ced5ee29ab6b5408)] [[flang][OpenMP] Fix fir.convert in omp.atomic.update region](https://github.com/llvm/llvm-project/pull/138397) Fixes issue [#138396](https://github.com/llvm/llvm-project/issues/138396)
