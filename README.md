@@ -14,6 +14,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 ## Patches
 
+[[Merged](https://github.com/llvm/llvm-project/commit/8650c801381d5640018a2fab32932ee41ad27797)] [[flang][OpenMP] Do not skip privatization of linear variable if it is OmpPreDetermined](https://github.com/llvm/llvm-project/pull/144315)
+
 [[Merged](https://github.com/llvm/llvm-project/commit/e970f59e6b20dddc4369735affb79ca9be240c1c)] [[flang][OpenMP] Reintroduce TODO for FIR lowering of linear clause](https://github.com/llvm/llvm-project/pull/144883)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/bf1fe6eb3312c5608c96135405a6654f789a6c79)] [[mlir][OpenMP] Reintroduce TODO for translation of linear clause](https://github.com/llvm/llvm-project/pull/143531)
