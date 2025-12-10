@@ -14,6 +14,8 @@ Phabricator profile link: [https://reviews.llvm.org/p/NimishMishra/](https://rev
 
 ## Patches
 
+[[Meged](https://github.com/llvm/llvm-test-suite/commit/fe242142b9ce918f15d388cb8d366d75e7aeaf3f)] [[gfortran] Disable linear-5.f90](https://github.com/llvm/llvm-test-suite/pull/308)
+
 [[Merged](https://github.com/llvm/llvm-project/commit/290b32a699aefbd1f18fe78351655dd42ce98f1e)] [[llvm][mlir][OpenMP] Support translation for linear clause in omp.wsloop and omp.simd](https://github.com/llvm/llvm-project/pull/139386)
 
 [[Merged](https://github.com/llvm/llvm-project/commit/8650c801381d5640018a2fab32932ee41ad27797)] [[flang][OpenMP] Do not skip privatization of linear variable if it is OmpPreDetermined](https://github.com/llvm/llvm-project/pull/144315)
